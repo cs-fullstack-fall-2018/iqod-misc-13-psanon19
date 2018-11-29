@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+var constVar = "I am a sentence that needs to be jumbled up a bit!";
+var emptyString = "";
+
+encodeWord(constVar);
+
+    function encodeWord(string)
+    {
+        for (x=0; x<string.length;x++) {
+            if (string[x].toUpperCase() === "A") {
+                emptyString += "@"
+            }
+
+            else if (string[x].toUpperCase() === "E") {
+                emptyString += "3"
+            }
+
+            else if (string[x].toUpperCase() === "I") {
+                emptyString += "1"
+            }
+
+            else if (string[x].toUpperCase() === "O") {
+                emptyString += "0"
+            }
+
+            else if (string[x].toUpperCase() === "S") {
+                emptyString += "$"
+            }
+
+            else {
+                emptyString += string[x]
+            }
+        }
+
+        return emptyString
+    }
+     document.write(emptyString)
+
+</script>
+
+</body>
+</html>
